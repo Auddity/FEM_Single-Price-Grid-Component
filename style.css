@@ -1,0 +1,116 @@
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Cyan-light: hsl(179, 42%, 56%);
+  --Bright-Yellow: hsl(71, 73%, 64%);
+  --Light-Gray: hsl(204, 30%, 75%);
+  --Grayish-Blue: hsl(218, 40%, 90%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global */
+html, body {
+  font-family: 'Karla', sans-serif;
+  background: var(--Grayish-Blue);
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding-bottom: 1.4rem;
+}
+
+small {
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: .5;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utitlity */
+.cyan-text {
+  color: var(--Cyan);
+}
+.yellow-text {
+  color: var(--Bright-Yellow);
+}
+.gray-text {
+  color: var(--Light-Gray);
+}
+
+.btn {
+  display: block;
+  outline-style: none;
+  margin-top: 1.4rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100%;
+}
+
+/* The Box & It's Elements */
+.box {
+  background: #fefefe;
+  color: #eee; 
+  width: 750px;
+  border-radius: 10px;
+  line-height: 1.4rem;
+  overflow: hidden;
+}
+
+.monthly, .join, .why-us {
+  padding: 50px;
+}
+
+.monthly h3 {
+  font-size: 2rem;
+  padding-top: 8px;
+}
+
+.monthly {
+  float: left;
+  width: 375px;
+  background: var(--Cyan);
+}
+
+.monthly a {
+  color: #fefefe;
+  background: var(--Bright-Yellow);
+}
+
+.why-us {
+  float: right;
+  width: 375px;
+  background: var(--Cyan-light);
+}
+
+/* Media Queries */
+@media screen and (max-width: 784px) {
+  .container {
+    width: 90%;
+    margin: 10% auto;
+  }
+
+  .monthly, .why-us {
+    width: 100%;
+  }
+}
